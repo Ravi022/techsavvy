@@ -7,14 +7,14 @@ export default function Headerright() {
     window.open(url, "_blank", "noreferrer");
   };
   return (
-    <div className="flex  ">
-      <div className="mx-2 text-slate-200 m-1 ">
+    <div className="flex justify-center items-center gap-3 mt-3 ">
+      <div className=" text-slate-200 m-1 ">
         <FaFacebook onClick={() => openInNewTab("https://facebook.com")} />
       </div>
-      <div className="mx-2 text-slate-200 m-1">
+      <div className=" text-slate-200 m-1">
         <FaInstagram onClick={() => openInNewTab("https://instagram.com")} />
       </div>
-      <div className="mx-2 text-slate-200 m-1">
+      <div className=" text-slate-200 m-1">
         {" "}
         <FaLinkedinIn onClick={() => openInNewTab("https://linkedin.com")} />
       </div>

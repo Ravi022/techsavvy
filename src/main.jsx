@@ -3,7 +3,6 @@ import "./index.css";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Layout from "./Layout.jsx";
-import Header from "./components/Header/Header.jsx";
 import About from "./components/Navigation/About/About.jsx";
 import DevServices from "./components/Navigation/DevServices/DevServices.jsx";
 import Training from "./components/Navigation/Training/Training";
@@ -20,7 +19,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "home",
+        path: "/",
         element: <Home />,
       },
       {
@@ -55,6 +54,7 @@ const router = createBrowserRouter([
         path: "security",
         element: <Security />,
       },
+      
     ],
   },
 ]);

@@ -4,7 +4,7 @@ import Headerright from "./Headerright";
 
 export default function Header() {
   return (
-    <div className="mt-2 flex justify-between">
+    <div className="flex justify-between">
       <Headerleft />
       <Headerright />
     </div>

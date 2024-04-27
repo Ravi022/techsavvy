@@ -14,7 +14,7 @@ export default function Layout() {
     padding: 0, // Add this to remove any default padding
   };
   return (
-    <div className="" style={backgroundImageStyle}>
+    <div style={backgroundImageStyle}>
       <div className="ml-20 mr-20">
         <Header />
         <Navigation />

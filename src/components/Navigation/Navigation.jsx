@@ -1,9 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
-import Button from "@mui/material/Button";
-import DropDown from "./../DropDown/DropDown.jsx";
-import { useState } from "react";
 import { motion } from "framer-motion";
+import { Button } from "../MovingBorder/ui/moving-border";
 
 export default function Navigation() {
   const [isHover, toggleHover] = React.useState(false);
@@ -32,21 +30,21 @@ export default function Navigation() {
     },
   };
   return (
-    <div className="mt-4 ">
-      <nav className="px-4 lg:px-6 py-2.5">
+    <div className=" mt-5">
+      <nav className="lg:px-6 py-2.5">
         <ul className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <li>
             <Link to="/" className="flex items-center">
               <img
                 src="https://tsinfosec.com/assets/img/banner/banner-logo.png"
-                className="mr-3 h-12"
+                className="mr-3 h-15"
                 alt="Logo"
               />
             </Link>
           </li>
           <li>
             <NavLink
-              to="/home"
+              to="/"
               className={({ isActive }) =>
                 ` text-base font-sans block py-2 pr-4 pl-3 duration-200 ${
                   isActive ? "text-orange-700" : "text-white -700"
@@ -80,7 +78,7 @@ export default function Navigation() {
             onHoverEnd={toggleHoverMenu}
           >
             <motion.div className="text-white">DevServices</motion.div>
-            <motion.div
+            {/* <motion.div
               className="sub-menu  ` absolute"
               initial="exit"
               animate={isHover ? "enter" : "exit"}
@@ -96,7 +94,7 @@ export default function Navigation() {
                   Application Development
                 </div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
           <li>
             <NavLink
@@ -175,12 +173,17 @@ export default function Navigation() {
               to="getstarted"
               className="flex items-center text-base font-sans"
             >
-              <Button
+              {/* <Button
                 style={{ backgroundColor: "#ff0000" }}
                 variant="contained"
               >
                 Get a Quote
-              </Button>
+              </Button> */}
+              <div className="">
+                <Button className="bg-rose-700 hover:bg-rose-800">
+                  Get a Quote
+                </Button>
+              </div>
             </Link>
           </li>
         </ul>
